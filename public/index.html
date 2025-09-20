@@ -31,10 +31,11 @@
         <div>
           <h1>AI-powered websites and automations that grow your business</h1>
           <p class="lead">We design and ship clean websites, integrate AI workflows, and automate the boring stuff — so you close more clients and spend less time on operations.</p>
-          <div style="display:flex; gap: 12px; flex-wrap: wrap;">
-            <a class="btn" href="#" onclick="return openCalendly()">Book 30-min strategy call</a>
-            <a class="btn outline" href="/pricing.html">See pricing</a>
-          </div>
+          <div class="stack-sm">
+  <a class="btn" href="#" onclick="return openCalendly()">Book 30-min strategy call</a>
+  <a class="btn outline" href="/pricing.html">See pricing</a>
+</div>
+
           <p class="small" style="margin-top:10px;">No hard sell — we’ll map your fastest path to value.</p>
         </div>
         <div>
@@ -60,8 +61,8 @@
     <section id="services" class="section">
       <div class="container">
         <h2>Services</h2>
-        <div class="grid" style="grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px;">
-          <div class="card">
+        <div class="grid-responsive-3">
+
             <h3>Website Build</h3>
             <p>Conversion-first website built with clean code and SEO basics.</p>
             <ul class="list">
@@ -102,11 +103,11 @@
               <a class="btn" href="#" onclick="return openCalendly()">Open Calendly</a>
               <p class="small" style="margin-top:8px;">Or use the embedded scheduler ↓</p>
             </div>
-            <div>
-              <div class="calendly-inline-widget"
-                   data-url="https://calendly.com/george-a-jeffrey2206/30min"
-                   style="min-width:320px;height:620px;"></div>
-            </div>
+            <div class="calendly-wrap">
+  <div class="calendly-inline-widget"
+       data-url="https://calendly.com/YOUR-CALENDLY-USERNAME/30min"></div>
+</div>
+
           </div>
         </div>
       </div>
@@ -135,10 +136,11 @@
             <label for="message">Message</label>
             <textarea class="input" id="message" name="message" placeholder="Tell us a bit about your goals..." rows="5" required></textarea>
           </div>
-          <div style="display:flex; gap:12px; align-items:center; margin-top:12px;">
-            <button class="btn" type="submit">Send message</button>
-            <span id="form-status" class="small"></span>
-          </div>
+          <div class="stack-sm" style="align-items:center; margin-top:12px;">
+  <button class="btn" type="submit">Send message</button>
+  <span id="form-status" class="small"></span>
+</div>
+
         </form>
 
         <p class="small" style="margin-top:16px;">By contacting us you agree to our friendly reply. No spam—ever.</p>

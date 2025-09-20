@@ -12,6 +12,16 @@ body{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Hel
 .container{width:min(1120px,92%);margin:0 auto;}
 .header{position:sticky;top:0;z-index:10;background:var(--white);border-bottom:1px solid rgba(0,0,0,0.06);backdrop-filter:blur(8px);}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+/* Ensure nav links don't override button text color */
+.nav a:not(.btn){
+  color: var(--dark);
+}
+
+/* Force white text on the button in the header nav */
+.nav .btn{
+  color: #fff !important;
+}
+
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .logo-mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--navy),#0f3460);display:grid;place-items:center;color:white;font-weight:800;}
 .logo-text{font-weight:800;color:var(--navy);font-size:1.15rem;letter-spacing:.2px;}
@@ -47,3 +57,42 @@ label{font-weight:700;display:block;margin-bottom:6px;}
 .error{color:#b91c1c;font-weight:700;}
 hr.sep{border:none;border-top:1px solid rgba(0,0,0,0.08);margin:24px 0;}
 footer a{color:#bfdbfe;}
+/* Make primary buttons stack on mobile with full width */
+.stack-sm{
+  display:flex; gap:12px; flex-wrap:wrap;
+}
+@media (max-width:640px){
+  .stack-sm .btn{ width:100%; text-align:center; }
+}
+
+/* Tweak hero spacing on mobile */
+@media (max-width:860px){
+  .hero{ padding: 28px 0 28px; }
+}
+
+/* Reusable 3-col -> 1-col grid for services/pricing */
+.grid-responsive-3{
+  display:grid; gap:18px;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+}
+@media (max-width:1100px){
+  .grid-responsive-3{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width:740px){
+  .grid-responsive-3{ grid-template-columns: 1fr; }
+}
+
+/* Make Calendly embed not force a fixed tall height on small screens */
+.calendly-wrap .calendly-inline-widget{
+  min-height: 620px;
+}
+@media (max-width:640px){
+  .calendly-wrap .calendly-inline-widget{
+    min-height: 540px;
+  }
+}
+
+/* Form touch targets a bit bigger on mobile */
+@media (max-width:640px){
+  .input, textarea{ padding: 14px 16px; }
+}
