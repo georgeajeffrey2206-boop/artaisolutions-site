@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Art AI Solutions — AI-Powered Websites & Automation</title>
+  <meta name="description" content="We build fast, conversion-focused websites and AI automations for modern businesses. Get a done-for-you site with smart workflows." />
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="/">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">Art AI Solutions</span>
+      </a>
+      <nav>
+        <a href="/pricing.html">Pricing</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#" onclick="return openCalendly()">Book a Call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container grid grid-2">
+        <div>
+          <h1>AI-powered websites and automations that grow your business</h1>
+          <p class="lead">We design and ship clean websites, integrate AI workflows, and automate the boring stuff — so you close more clients and spend less time on operations.</p>
+          <div style="display:flex; gap: 12px; flex-wrap: wrap;">
+            <a class="btn" href="#" onclick="return openCalendly()">Book 30-min strategy call</a>
+            <a class="btn outline" href="/pricing.html">See pricing</a>
+          </div>
+          <p class="small" style="margin-top:10px;">No hard sell — we’ll map your fastest path to value.</p>
+        </div>
+        <div>
+          <div class="card">
+            <span class="badge">What we do</span>
+            <h2 style="margin-top:10px;">Websites + AI, done for you</h2>
+            <ul class="list">
+              <li>Design & build blazing-fast websites with modern UX</li>
+              <li>Automate lead capture, onboarding, and follow-ups</li>
+              <li>Add AI chatbots, content tools, and internal assistants</li>
+              <li>Connect CRMs, calendars, and payment flows</li>
+            </ul>
+            <hr class="sep" />
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap:12px">
+              <a class="btn outline" href="#services">Explore services</a>
+              <a class="btn" href="#" onclick="return openCalendly()">Get started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="grid" style="grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px;">
+          <div class="card">
+            <h3>Website Build</h3>
+            <p>Conversion-first website built with clean code and SEO basics.</p>
+            <ul class="list">
+              <li>Design + copy assistance</li>
+              <li>SEO-friendly, fast, responsive</li>
+              <li>Launch + analytics setup</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>AI Automations</h3>
+            <p>Automate lead gen, onboarding, ops, and customer support.</p>
+            <ul class="list">
+              <li>AI chatbots and assistants</li>
+              <li>CRM + email + calendar workflows</li>
+              <li>Zapier/Make integrations</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Growth Stack</h3>
+            <p>Retainers to iterate, test, and ship improvements monthly.</p>
+            <ul class="list">
+              <li>Landing pages & experiments</li>
+              <li>Content tooling with AI</li>
+              <li>Reports & insights</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <div class="grid grid-2">
+            <div>
+              <h2>Book a free 30-minute call</h2>
+              <p class="lead">Tell us about your goals. We’ll outline a plan and timeline, and if it’s a fit, we’ll get to work.</p>
+              <a class="btn" href="#" onclick="return openCalendly()">Open Calendly</a>
+              <p class="small" style="margin-top:8px;">Or use the embedded scheduler ↓</p>
+            </div>
+            <div>
+              <div class="calendly-inline-widget"
+                   data-url="https://calendly.com/george-a-jeffrey2206/30min"
+                   style="min-width:320px;height:620px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="footer">
+      <div class="container">
+        <h2 style="color:white;">Contact</h2>
+        <p class="small">Have a project in mind? Send a message and we’ll reply within a business day.</p>
+        <form id="contact-form" class="card" style="background: rgba(255,255,255,0.98); color: var(--dark);">
+          <div class="form-row">
+            <div>
+              <label for="name">Name</label>
+              <input class="input" type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input class="input" type="email" id="email" name="email" placeholder="you@company.com" required />
+            </div>
+          </div>
+          <div style="display:none">
+            <label for="website">Website (ignore)</label>
+            <input class="input" type="text" id="website" name="website" />
+          </div>
+          <div style="margin-top:12px">
+            <label for="message">Message</label>
+            <textarea class="input" id="message" name="message" placeholder="Tell us a bit about your goals..." rows="5" required></textarea>
+          </div>
+          <div style="display:flex; gap:12px; align-items:center; margin-top:12px;">
+            <button class="btn" type="submit">Send message</button>
+            <span id="form-status" class="small"></span>
+          </div>
+        </form>
+
+        <p class="small" style="margin-top:16px;">By contacting us you agree to our friendly reply. No spam—ever.</p>
+        <hr class="sep" />
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+          <p>&copy; <span id="year"></span> Art AI Solutions. All rights reserved.</p>
+          <p><a href="/pricing.html">Pricing</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="/app.js"></script>
+</body>
+</html>
