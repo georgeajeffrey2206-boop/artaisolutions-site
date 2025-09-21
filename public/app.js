@@ -1,11 +1,12 @@
-window.openCalendly = function(){
-  if (window.Calendly) {
-    Calendly.initPopupWidget({url: 'https://calendly.com/george-a-jeffrey2206/30min'});
-  } else {
-    alert('Calendly is still loading. Please try again in a moment.');
-  }
-  return false;
+// Popup launcher for the "Book" buttons/links
+function openCalendly() {
+  Calendly.initPopupWidget({
+    // ⬇️ Put your FULL Calendly event link here:
+    url: 'https://calendly.com/george-a-jeffrey2206/30min'
+  });
+  return false; // prevent default link navigation
 }
+
 
 async function handleContactSubmit(e){
   e.preventDefault();
