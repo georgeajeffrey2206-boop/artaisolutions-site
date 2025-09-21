@@ -13,7 +13,6 @@
   <header class="header">
     <div class="container nav">
      <a class="logo" href="/">
-  <span class="logo-mark">A</span>
   <span class="logo-text">Art AI Solutions</span>
 </a> 
       <nav>
@@ -101,25 +100,26 @@
 </section>
 
 
-    <section class="section">
-      <div class="container">
-        <div class="card">
-          <div class="grid grid-2">
-            <div>
-              <h2>Book a free 30-minute call</h2>
-              <p class="lead">Tell us about your goals. We’ll outline a plan and timeline, and if it’s a fit, we’ll get to work.</p>
-              <a class="btn" href="#" onclick="return openCalendly()">Open Calendly</a>
-              <p class="small" style="margin-top:8px;">Or use the embedded scheduler ↓</p>
-            </div>
-            <div class="calendly-wrap">
-  <div class="calendly-inline-widget"
-       data-url="https://calendly.com/YOUR-CALENDLY-USERNAME/30min"></div>
-</div>
-
-          </div>
-        </div>
+   <section class="section" id="book">
+  <div class="container">
+    <div class="grid grid-2">
+      <!-- Left column -->
+      <div class="card">
+        <h2>Book a free 30-minute call</h2>
+        <p class="lead">Tell us about your goals. We’ll outline a plan and timeline, and if it’s a fit, we’ll get to work.</p>
+        <a class="btn" href="#" onclick="return openCalendly()">Open Calendly</a>
+        <p class="small" style="margin-top:8px;">Or use the embedded scheduler ↓</p>
       </div>
-    </section>
+
+      <!-- Right column: Calendly in its own card -->
+      <div class="card calendly-card">
+        <div class="calendly-inline-widget"
+             data-url="https://calendly.com/georgeajeffrey2206/30min"></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
 
     <section id="contact" class="footer">
       <div class="container">

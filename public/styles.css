@@ -96,4 +96,15 @@ footer a{color:#bfdbfe;}
 @media (max-width:640px){
   .input, textarea{ padding: 14px 16px; }
 }
+/* Calendly card: give the embed a readable height and full width */
+.calendly-card{ padding:0; overflow:hidden; }
+.calendly-card .calendly-inline-widget{
+  width:100% !important;
+  height:760px !important; /* desktop/tablet */
+}
+@media (max-width:860px){
+  .calendly-card .calendly-inline-widget{
+    height:620px !important; /* phones */
+  }
+}
 
