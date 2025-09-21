@@ -1,11 +1,11 @@
-// Popup launcher for the "Book" buttons/links
 function openCalendly() {
   Calendly.initPopupWidget({
-    // ⬇️ Put your FULL Calendly event link here:
-    url: 'https://calendly.com/george-a-jeffrey2206/30min'
+    url: 'https://calendly.com/george-a-jeffrey2206/30min' // same as above, but WITHOUT the embed params
   });
-  return false; // prevent default link navigation
+  return false;
 }
+
+
 
 
 async function handleContactSubmit(e){
