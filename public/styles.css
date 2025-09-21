@@ -238,3 +238,47 @@ hr.sep{
 @media (max-width:640px){
   .calendly-inline-widget{ height:560px !important; }
 }
+/* Kill any leftover logo mark or pseudo-elements */
+.logo-mark{ display:none !important; }
+.logo::before,
+.logo::after{ content:none !important; display:none !important; }
+.logo{ gap:0; }
+/* Prevent equal-height stretch in grids (so left card only fits its content) */
+.grid, .grid-2 { align-items: start; }
+/* Calendly: fixed, responsive height + tidy frame */
+.calendly-inline-widget{
+  width:100% !important;
+  height:760px !important;             /* desktop */
+  min-width:320px;
+  border:1px solid rgba(0,0,0,0.08);
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(2,6,23,0.06);
+  overflow:hidden;
+}
+@media (max-width:1024px){
+  .calendly-inline-widget{ height:680px !important; }
+}
+@media (max-width:640px){
+  .calendly-inline-widget{ height:560px !important; }
+}
+/* Book-call grid: don't stretch items to same height */
+.grid, .grid-2 { align-items: start; }
+
+/* Calendly: fixed, responsive height (works regardless of wrapper) */
+.calendly-inline-widget{
+  width:100% !important;
+  height:760px !important;     /* desktop */
+  min-width:320px;
+  border:1px solid rgba(0,0,0,0.08);
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(2,6,23,0.06);
+  overflow:hidden;
+}
+@media (max-width:1024px){
+  .calendly-inline-widget{ height:680px !important; }
+}
+@media (max-width:640px){
+  .calendly-inline-widget{ height:560px !important; }
+}
